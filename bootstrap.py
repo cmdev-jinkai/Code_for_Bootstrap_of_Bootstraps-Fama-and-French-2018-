@@ -108,7 +108,6 @@ def bootstrap (df, periods_month, method = 'NED', condidence_interval = 95):
             
             #repeat each simulation of sampling 100000 monthly returns for 1000 times, consistent with Fama and French (2018).
             for i in range(1000):
-                #base sample selected from normal distribution with same mean and std in real month data
                 data_application = np.random.normal(mu_NED, sigma_NED, 100000)
                 
                 mean_collection.append(np.mean(data_application))
@@ -144,7 +143,6 @@ def bootstrap (df, periods_month, method = 'NED', condidence_interval = 95):
             right_collection = []
             
             for i in range(1000):
-            #base sample selected from real monthly return data
                 data_application = random.choices(returns, k = 100000)
                 mean_collection.append(np.mean(data_application))
                 std_collection.append(np.std(data_application))

@@ -1,9 +1,5 @@
-import pandas as pd
-import numpy as np
-import random
-
 '''
-Name: The update version of BB approach
+Name: The updated version of BB approach
 Author: Jinkai Zhang
 Date: July 13, 2020
 
@@ -16,7 +12,8 @@ Note:
 
 Data:
     S&P monthly return from 1961 - 2020
-    
+
+
 Results:
     NED Method:
         Predict US 1-year return using bootstrap-NED
@@ -50,8 +47,16 @@ Results:
         Predict US 20-year return using bootstrap-FS
         {'Mean(%)': 7.4988, 'Standard Deviation(%)': 2.8623, 'Median(%)': 6.8997, '25th(%)': 5.4341, '75th(%)': 9.6596, 'Confidence Interval(95)(%)': [3.57, 13.1759]}
                 
+Reference: 
+    Fama E.F. and French, K.R., 2018. Long-horizon returns. The Review of Asset Pricing Studies, 8(2), 232-252.
+    Link: https://academic.oup.com/raps/article-abstract/8/2/232/4810768
+
+Please refer to the paper (Fama and French, 2018) attached for detailed steps for this method.
 '''
 
+import pandas as pd
+import numpy as np
+import random
 
 
 #just change the working directory and read this data
